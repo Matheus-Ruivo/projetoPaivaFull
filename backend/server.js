@@ -45,11 +45,6 @@ app.get('/', (req, res) => {
   res.json({ mensagem: 'TechRent API está rodando!' });
 });
 
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(500).json({ erro: 'Erro interno do servidor' });
-});
-
 // ---- Inicialização do servidor ----
 const PORT = process.env.PORT || 3001;
 
